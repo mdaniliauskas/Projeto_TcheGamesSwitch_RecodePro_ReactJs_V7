@@ -2,7 +2,8 @@ import { Link, withRouter } from 'react-router-dom';
 import { Navbar, Nav } from 'react-bootstrap';
 import './Menu.css';
 
-function BaseMenu() {
+function BaseMenu(props) {
+    const { location } = props;
     return (
         <Navbar className="navbar-dark" bg="dark" expand="lg" fixed="top">
         <Navbar.Brand>
@@ -10,11 +11,12 @@ function BaseMenu() {
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="item-menu" />
         <Navbar.Collapse id="item-menu">
-            <Nav>
-                <Nav.Link href="/" to="/">Página Inicial</Nav.Link>
-                <Nav.Link href="/produtos" to="/produtos">Produtos</Nav.Link>
-                <Nav.Link href="/pedidos" to="/pedidos">Pedidos</Nav.Link>
-                <Nav.Link href="/contatos" to="/contatos">Contatos</Nav.Link>
+            <Nav activeKey={location.pathname}>
+                <Nav.Link as={Link} href="/" to="/">Página Inicial</Nav.Link>
+                <Nav.Link as={Link} href="/produtos" to="/produtos">Produtos</Nav.Link>
+                <Nav.Link as={Link} href="/pedidos" to="/pedidos">Pedidos</Nav.Link>
+                <Nav.Link as={Link} href="/lojas" to="/lojas">Nossas lojas</Nav.Link>
+                <Nav.Link as={Link} href="/contatos" to="/contatos">Contatos</Nav.Link>
             </Nav>
         </Navbar.Collapse>
         </Navbar>
