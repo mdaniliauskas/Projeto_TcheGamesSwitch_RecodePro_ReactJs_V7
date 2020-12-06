@@ -4,13 +4,16 @@ function ModeloProduto(props) {
     return (     
 
         <figure className={props.categoria}>
-            <img src={require(`./img/produtos/Acessorios/${props.imagem}`).default} alt="teste" />
+            <img src={require(`${props.imagem}`).default} alt="teste" />
             <figcaption>
                 <p className="nome-prod">
-                    {props.nome}
+                    {props.descricao}
                 </p>
                 <p className="precofinal-prod">
-                    R$ {props.preco}
+                    R$ {props.precoCheio}
+                </p>
+                <p className="precofinal-prod">
+                    R$ {props.precoDesconto}
                 </p>
             </figcaption>
         </figure>
