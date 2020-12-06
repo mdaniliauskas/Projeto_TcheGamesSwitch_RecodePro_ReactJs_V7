@@ -1,5 +1,5 @@
 import {useState} from 'react';
-import { Form, Button, Row } from "react-bootstrap";
+import { Form, Button } from "react-bootstrap";
 
 
 export default function Pedidos(props) {
@@ -9,7 +9,7 @@ export default function Pedidos(props) {
         email:"",
         telefone: "",
         endereco: "",
-        produto: "",
+        produto_id: "",
         quantidade: ""
     });
 
@@ -21,10 +21,11 @@ export default function Pedidos(props) {
     };  
 
     const Envio = async (evento) => {
-        evento.preventDefault();
-                
-        const resposta = fetch("http://localhost/tchegames_React/src/php/pedidos.php", { method: "POST", body: new FormData(evento.target) });
+             
+        const resultado = fetch("http://localhost/tchegames_React/src/php/pedidos.php", { method: "POST", body: new FormData(evento.target) });
+        alert("Pedido enviado com sucesso!")
     };   
+    
 
     return (
         <div className="form-group col-md-6">            
@@ -38,13 +39,29 @@ export default function Pedidos(props) {
                     <Form.Control onChange={alteracao} type="email" id="email" name="email" placeholder="Email" />
                    
                     <Form.Label>Telefone:</Form.Label>
-                    <Form.Control onChange={alteracao} type="text" id="telefone" nome="telefone" placeholder="Telefone" />
+                    <Form.Control onChange={alteracao} type="text" id="telefone" name="telefone" placeholder="Telefone" />
 
                     <Form.Label>Endereço:</Form.Label>
                     <Form.Control onChange={alteracao} type="text" id="endereco" name="endereco" placeholder="Endereço completo" />
 
-                    <Form.Label>Nome do produto:</Form.Label>
-                    <Form.Control onChange={alteracao} type="text" id="produto" name="produto" placeholder="Nome do produto" />
+                    <Form.Label>Selecione o produto desejado:</Form.Label>
+                    <Form.Control onChange={alteracao} as="select" id="produto_id" name="produto_id">
+                    <option value="1">Nintendo Switch - Vermelho e Azul</option>
+                    <option value="2">Nintendo Switch - Cinza</option>
+                    <option value="3">Nintendo Switch Lite - Amarelo</option>
+                    <option value="4">Nintendo Switch Lite - Cinza</option>
+                    <option value="5">Nintendo Switch Lite - Coral</option>
+                    <option value="6">Nintendo Switch Lite - Turquesa</option>
+                    <option value="7">Super Mario Odyssey</option>
+                    <option value="8">Mario Kart</option>
+                    <option value="9">The Legend Of Zelda Breath Of The Wild</option>
+                    <option value="10">Sonic Forces</option>
+                    <option value="11">Pokémon Sword</option>
+                    <option value="12">Dock Station Charging</option>
+                    <option value="13">Organizador de jogos</option>
+                    <option value="14">Película de vidro ultra-resistente</option>
+                    <option value="15">Pro Contoller Nintendo Switch</option>
+                    </Form.Control>
 
                     <Form.Label>Quantidade:</Form.Label>
                     <Form.Control onChange={alteracao} type="text" id="quantidade" name="quantidade" placeholder="Quantidade do produto" />
@@ -55,3 +72,4 @@ export default function Pedidos(props) {
         </div>
     )
 }
+

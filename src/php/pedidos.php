@@ -17,10 +17,10 @@ $nomeClientes = $_POST['nomeClientes'];
 $email = $_POST['email'];
 $telefone = $_POST['telefone'];
 $endereco = $_POST['endereco'];
-$produto = $_POST['produto'];
+$produto_id = $_POST['produto_id'];
 $quantidade = $_POST['quantidade'];
 
-$sql = "insert into pedidos2 (nomeClientes, email, telefone, endereco, produto, quantidade) values ('$nomeClientes', '$email', '$telefone', '$endereco', '$produto', '$quantidade')";
+$sql = "insert into pedidos (nomeClientes, email, telefone, endereco, produto_id, quantidade) values ('$nomeClientes', '$email', '$telefone', '$endereco', '$produto_id', '$quantidade')";
 $result = $conn->query($sql);  
 mysqli_close($conn);     
 
