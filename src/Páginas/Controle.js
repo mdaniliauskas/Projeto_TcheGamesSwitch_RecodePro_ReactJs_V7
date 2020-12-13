@@ -1,23 +1,27 @@
-import { Container, Row } from 'react-bootstrap';
-import ModeloProduto from '../Components/Produtos';
+import { Container, Table, Row } from 'react-bootstrap';
+import ModeloTabela from '../Components/Controle';
 import '../Components/Produtos/Produtos.css';
 import { useState, useEffect } from 'react';
 
-export default function Controle() {
+export default function Controle(props) {
     const [ controle, setControle ] = useState([]);
 
     useEffect(async () => {
         const resposta = await fetch("http://localhost/tchegames_React/src/php/controle.php");
         const dados = await resposta.json();
-        setControle(dados);   
-        console.log(dados);     
-    }, []);
-
+        setControle(dados);                                
+    }, []);    
     
 
-    return (
-       <h4>Controle de pedidos</h4>
-       
+       return (
+        <Container fluid>
+            <h4>Controle de pedidos</h4><br />
+        
+            <Table>                  
+            {controle && controle.map(item => <ModeloTabela id_pedidos={item.id_pedidos} data={item.data} nomeClientes={item.nomeClientes} email={item.email} telefone={item.telefone} endereco={item.endereco} produto_id={item.produto_id} quantidade={item.quantidade} categoria={item.categoria} descricao={item.descricao} precoCheio={item.precoCheio} precoDesconto={item.precoDesconto} />)}
+            </Table>
+
+        </Container>
     );
 }
 
