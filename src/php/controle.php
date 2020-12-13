@@ -13,16 +13,16 @@ if (!$conn) {
     die("Problemas de conexão com o banco de dados.<br> ".mysqli_connect_error());
 }
 
-$sql = "SELECT * FROM produtos";
+$sql = "SELECT * FROM pedidos INNER JOIN produtos on pedidos.produto_id = produtos.idprodutos;";
 $result = $conn->query($sql);
-$produtos = [];
+$controle = [];
 
 If ($result->num_rows > 0) {
     while($rows = $result->fetch_assoc()){  
-        $produtos[] = $rows;};
+        $controle[] = $rows;};
 };
 
-echo json_encode($produtos);
+echo json_encode($controle);
 
 mysqli_close($conn);
 
