@@ -22,6 +22,7 @@ export default function Pedidos(props) {
 
     const Envio = async (evento) => {
              
+        // eslint-disable-next-line no-unused-vars
         const resultado = fetch("http://localhost/tchegames_React/src/php/pedidos.php", { method: "POST", body: new FormData(evento.target) });
         alert("Pedido enviado com sucesso!")
     };   

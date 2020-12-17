@@ -12,10 +12,13 @@ function App() {
         <Menu />
       </header>
       <main>
-        <Container fluid>
+        <Container>
           <Rotas />
         </Container>
       </main>
+      <footer>
+        
+      </footer>
       
     </div>
     </BrowserRouter>    

@@ -4,7 +4,7 @@ function ModeloProduto(props) {
     return (     
 
         <figure className={props.categoria}>
-            <img src={require(`${props.imagem}`).default} alt="teste" />
+            <img src={require(`${props.imagem}`).default} alt="Produtos" width="120px" />
             <figcaption>
                 <p className="nome-prod">
                     {props.descricao}

@@ -1,4 +1,4 @@
-import { Container, Table, Row, td } from 'react-bootstrap';
+import { Table } from 'react-bootstrap';
 
 function ModeloTabela(props) {
     return (  

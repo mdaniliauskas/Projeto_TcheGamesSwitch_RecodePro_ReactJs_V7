@@ -1,4 +1,4 @@
-import { Container, Table, Row } from 'react-bootstrap';
+import { Container, Table } from 'react-bootstrap';
 import ModeloTabela from '../Components/Controle';
 import '../Components/Produtos/Produtos.css';
 import { useState, useEffect } from 'react';
@@ -6,6 +6,7 @@ import { useState, useEffect } from 'react';
 export default function Controle(props) {
     const [ controle, setControle ] = useState([]);
 
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(async () => {
         const resposta = await fetch("http://localhost/tchegames_React/src/php/controle.php");
         const dados = await resposta.json();
@@ -15,6 +16,7 @@ export default function Controle(props) {
 
        return (
         <Container fluid>
+            
             <h4>Controle de pedidos</h4><br />
         
             <Table>                  
