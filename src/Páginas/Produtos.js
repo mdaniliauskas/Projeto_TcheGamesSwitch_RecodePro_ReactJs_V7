@@ -16,12 +16,13 @@ export default function Produtos() {
 
     return (
         <Container>
-            <div style={{justifyContent: 'center'}}>
-            <Row className="justify-content-md-center">
+            <h3>Nossos produtos</h3>
+            <br /><br />
+
+            <Row className="justify-content-center">
             {produtos && produtos.map(item => <ModeloProduto imagem={item.imagem} descricao={item.descricao} precoCheio={item.precoCheio} precoDesconto={item.precoDesconto} categoria={item.categoria} />)}
             </Row>
-            </div>
-        </Container>
+            </Container>
     )
 }
 

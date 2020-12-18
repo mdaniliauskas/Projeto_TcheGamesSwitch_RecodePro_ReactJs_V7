@@ -30,7 +30,7 @@ export default function Pedidos(props) {
 
     return (
         <div className="form-group col-md-6">            
-                <h4>Realizar pedido</h4>
+                <h3>Realizar pedido</h3><br />
                 <Form onSubmit={Envio}>
                 <Form.Group>
                     <Form.Label>Nome:</Form.Label>
@@ -66,7 +66,7 @@ export default function Pedidos(props) {
 
                     <Form.Label>Quantidade:</Form.Label>
                     <Form.Control onChange={alteracao} type="text" id="quantidade" name="quantidade" placeholder="Quantidade do produto" />
-
+                    <br />
                     <Button variant="info" type="submit">Enviar</Button>
                 </Form.Group>
                 </Form>          

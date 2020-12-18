@@ -1,8 +1,8 @@
-.precoDesconto {
+.precoCheio {
     text-decoration: line-through;
     font-size: 15px;
 } 
 
-.preco {
+.precoDesconto {
     color: red;
 }

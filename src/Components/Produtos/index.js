@@ -1,4 +1,4 @@
-
+import estilo from './Produtos.css';
 
 function ModeloProduto(props) {
     return (     
@@ -9,10 +9,10 @@ function ModeloProduto(props) {
                 <p className="nome-prod">
                     {props.descricao}
                 </p>
-                <p className="precofinal-prod">
+                <p className="precoCheio">
                     R$ {props.precoCheio}
                 </p>
-                <p className="precofinal-prod">
+                <p className="precoDesconto">
                     R$ {props.precoDesconto}
                 </p>
             </figcaption>

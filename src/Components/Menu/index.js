@@ -7,7 +7,7 @@ function BaseMenu(props) {
     return (
         <Navbar className="navbar-dark" bg="dark" expand="lg" fixed="top">
         <Navbar.Brand>
-            Tchê Games
+        <img src={require('../Produtos/img/logos/TGW_Logo.png').default} alt="Contatos" width="125px" /><br />
         </Navbar.Brand>
         <Navbar.Toggle aria-controls="item-menu" />
         <Navbar.Collapse id="item-menu">
@@ -21,6 +21,7 @@ function BaseMenu(props) {
             </Nav>
         </Navbar.Collapse>
         </Navbar>
+        
     )
 }
 

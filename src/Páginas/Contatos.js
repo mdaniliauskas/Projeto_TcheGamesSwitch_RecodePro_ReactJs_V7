@@ -1,6 +1,6 @@
 
 
-import { Container } from 'react-bootstrap';
+import { Container, Row } from 'react-bootstrap';
 
 
 export default function Contatos() {
@@ -8,23 +8,36 @@ export default function Contatos() {
     return (
         <Container>
 
-            <h2>Nossos contatos</h2>
+            <h3>Nossos contatos</h3>
             <br /><br />
             
             <div>
                 <div id="contatos">
-                    <img src={require('../Components/Produtos/img/logos/Email_logo.jpg').default} alt="Contatos" width="200px" width="100px" /><br />
-                    atendimento@tchegames.com.br<br />                    
-                </div>
-                <br />
-                <div id="contatos">                
-                     <img src={require('../Components/Produtos/img/logos/Whats_logo.jpg').default} alt="Contatos" width="200px" width="100px" /><br />
-                     0800-000000<br />                                      
+                    <Row className="justify-content-center">
+                    <img src={require('../Components/Produtos/img/logos/Email_logo.jpg').default} alt="Contatos" width="100px" /><br />
+                    </Row>
+                    <Row className="justify-content-center">
+                    atendimento@tchegames.com.br<br /> 
+                    </Row>                   
                 </div>
                 <br />
                 <div id="contatos">
-			        <img src={require('../Components/Produtos/img/logos/Teleatendimento_logo.jpg').default} alt="Contatos" width="200px" width="100px" /><br />                   
-                    Atendimento por chat<br />                    
+                     <Row className="justify-content-center">                
+                     <img src={require('../Components/Produtos/img/logos/Whats_logo.jpg').default} alt="Contatos" width="100px" /><br />
+                     </Row>
+                     <Row className="justify-content-center">
+                     0800-000000<br />
+                     </Row>                                      
+                </div>
+                <br />
+                <div id="contatos">
+                    <Row className="justify-content-center">
+                    <img src={require('../Components/Produtos/img/logos/Teleatendimento_logo.jpg').default} alt="Contatos" width="100px" /><br />                   
+                    </Row>
+                    <Row className="justify-content-center">
+                    Atendimento por chat<br />
+                    </Row> 
+                    <br /><br />                   
                 </div>
             </div>      
         </Container>
