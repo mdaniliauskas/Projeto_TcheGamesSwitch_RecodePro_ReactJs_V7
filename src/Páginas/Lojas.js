@@ -13,9 +13,9 @@ export default function Lojas() {
         <br /><br />
             
 
-            <ListGroup>
+            <ListGroup variant="flush">
                 <ListGroup.Item>
-                    <h3 class="text-primary">São Paulo (Matriz)</h3>
+                    <h4 class="text-danger">São Paulo (Matriz)</h4>
                     <p>Avenida Paulista, 2000</p>
                     <p>São Paulo - SP</p>
                     <p>(11) 222222-2222</p>
@@ -23,7 +23,7 @@ export default function Lojas() {
                 </ListGroup.Item>
 
                 <ListGroup.Item>     
-                <h3 class="text-primary">Rio de Janeiro</h3>
+                <h4 class="text-danger">Rio de Janeiro</h4>
                     <p>Avenida Getúlio Vargas, 1100</p>
                     <p>Rio de Janeiro - RJ</p>
                     <p>(21) 222222-2222</p>
@@ -31,7 +31,7 @@ export default function Lojas() {
                 </ListGroup.Item>           
             
                <ListGroup.Item>
-                        <h3 className="text-primary">Porto Alegre</h3>
+                        <h4 class="text-danger">Porto Alegre</h4>
                         <p>Avenida Alberto Bins, 250</p>
                         <p>Porto Alegre - RS</p>
                         <p>(51) 222222-2222</p>

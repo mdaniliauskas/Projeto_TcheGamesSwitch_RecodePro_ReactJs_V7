@@ -6,3 +6,9 @@
 .precoDesconto {
     color: red;
 }
+
+#bloco {   
+    display: inline-table;
+    width: 250px;
+    height: 250px;
+}

@@ -11,7 +11,7 @@ export default function Produtos() {
         const resposta = await fetch("http://localhost/tchegames_React/src/php/produtos.php");
         const dados = await resposta.json();
         setProdutos(dados);  
-        console.log(dados);      
+              
     }, []);
 
     return (
@@ -19,7 +19,7 @@ export default function Produtos() {
             <h3>Nossos produtos</h3>
             <br /><br />
 
-            <Row className="justify-content-center">
+            <Row className="text-center">
             {produtos && produtos.map(item => <ModeloProduto imagem={item.imagem} descricao={item.descricao} precoCheio={item.precoCheio} precoDesconto={item.precoDesconto} categoria={item.categoria} />)}
             </Row>
             </Container>
