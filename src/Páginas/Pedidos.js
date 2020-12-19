@@ -67,7 +67,7 @@ export default function Pedidos(props) {
                     <Form.Label>Quantidade:</Form.Label>
                     <Form.Control onChange={alteracao} type="text" id="quantidade" name="quantidade" placeholder="Quantidade do produto" />
                     <br />
-                    <Button variant="info" type="submit">Enviar</Button>
+                    <Button variant="primary" type="submit">Enviar</Button>
                 </Form.Group>
                 </Form>          
         </div>

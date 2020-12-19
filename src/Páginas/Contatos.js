@@ -16,7 +16,7 @@ export default function Contatos() {
                     <Row className="justify-content-center">
                     <img src={require('../Components/Produtos/img/logos/Email_logo.jpg').default} alt="Contatos" width="100px" /><br />
                     </Row>
-                    <Row className="justify-content-center">
+                    <Row className="justify-content-center" style={{color: "cornflowerblue"}}>
                     atendimento@tchegames.com.br<br /> 
                     </Row>                   
                 </div>
@@ -25,7 +25,7 @@ export default function Contatos() {
                      <Row className="justify-content-center">                
                      <img src={require('../Components/Produtos/img/logos/Whats_logo.jpg').default} alt="Contatos" width="100px" /><br />
                      </Row>
-                     <Row className="justify-content-center">
+                     <Row className="justify-content-center" style={{color: "cornflowerblue"}}>
                      0800-000000<br />
                      </Row>                                      
                 </div>
@@ -34,7 +34,7 @@ export default function Contatos() {
                     <Row className="justify-content-center">
                     <img src={require('../Components/Produtos/img/logos/Teleatendimento_logo.jpg').default} alt="Contatos" width="100px" /><br />                   
                     </Row>
-                    <Row className="justify-content-center">
+                    <Row className="justify-content-center" style={{color: "cornflowerblue"}}>
                     Atendimento por chat<br />
                     </Row> 
                     <br /><br />                   

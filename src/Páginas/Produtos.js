@@ -1,5 +1,6 @@
-import { Container, Row } from 'react-bootstrap';
+import { Container, Row, Nav, Col } from 'react-bootstrap';
 import ModeloProduto from '../Components/Produtos';
+import Acessorios from './Acessorios';
 import '../Components/Produtos/Produtos.css';
 import { useState, useEffect } from 'react';
 
@@ -15,14 +16,37 @@ export default function Produtos() {
     }, []);
 
     return (
-        <Container>
+        <Row>
+            <Col sm={2} id="largura">
+            <Nav className="d-none d-md-block bg-light sidebar" id="lateral">
+            
+            <Nav.Item>
+            <Nav.Link href="/Produtos">Todos (15)</Nav.Link>   
+            </Nav.Item>
+            
+            <Nav.Item>
+            <Nav.Link href="/Consoles">Consoles (6)</Nav.Link>
+            </Nav.Item>
+
+            <Nav.Item>
+            <Nav.Link href="/Jogos">Jogos (5)</Nav.Link>
+            </Nav.Item>
+            
+            <Nav.Item>
+            <Nav.Link href="/Acessorios">Acessórios (4)</Nav.Link>   
+            </Nav.Item>
+
+            </Nav>
+            </Col>
+            
+            <Col sm={10}>
             <h3>Nossos produtos</h3>
             <br /><br />
-
-            <Row className="text-center">
+            
             {produtos && produtos.map(item => <ModeloProduto imagem={item.imagem} descricao={item.descricao} precoCheio={item.precoCheio} precoDesconto={item.precoDesconto} categoria={item.categoria} />)}
+            </Col>
             </Row>
-            </Container>
+        
     )
 }
 

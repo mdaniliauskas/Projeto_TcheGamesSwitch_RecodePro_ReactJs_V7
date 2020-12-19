@@ -34,7 +34,7 @@ CREATE TABLE `pedidos` (
   `produto_id` int DEFAULT NULL,
   `quantidade` int DEFAULT NULL,
   PRIMARY KEY (`id_pedidos`)
-) ENGINE=MyISAM AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -43,7 +43,7 @@ CREATE TABLE `pedidos` (
 
 LOCK TABLES `pedidos` WRITE;
 /*!40000 ALTER TABLE `pedidos` DISABLE KEYS */;
-INSERT INTO `pedidos` VALUES (1,'2020-12-13 13:33:53','Marcelo','marcelo@marcelo.com','11 1111111','Rua oi',1,2),(2,'2020-12-13 17:27:53','Teste','testes@teste.com','11 911','Rua das ostras',3,3),(3,'2020-12-13 19:56:14','Veruka','ver@uka.ca','+1 909090','Rua US',12,1),(4,'2020-12-13 19:58:34','Ana Maria','am@am.com.br','(21) 9999-99','R. Getúlio Vargas, 2000 - Cj. 32',6,5),(5,'2020-12-13 19:59:07','João das Neves','JN@neves.com','(51) 77777-77777','Rua Sete',15,2);
+INSERT INTO `pedidos` VALUES (1,'2020-12-13 13:33:53','Marcelo','marcelo@marcelo.com','11 1111111','Rua oi',1,2),(2,'2020-12-13 17:27:53','Teste','testes@teste.com','11 911','Rua das ostras',3,3),(3,'2020-12-13 19:56:14','Veruka','ver@uka.ca','+1 909090','Rua US',12,1),(4,'2020-12-13 19:58:34','Ana Maria','am@am.com.br','(21) 9999-99','R. Getúlio Vargas, 2000 - Cj. 32',6,5),(5,'2020-12-13 19:59:07','João das Neves','JN@neves.com','(51) 77777-77777','Rua Sete',15,2),(6,'2020-12-18 19:19:07','Samuel','samuel@samuel.com','11 111111111','Travessa Viana, 11',15,2),(7,'2020-12-18 19:20:10','Elizeu','elizeu@elizeu.com','11 22222222','Rua São Paulo',11,1);
 /*!40000 ALTER TABLE `pedidos` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -94,4 +94,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-12-13 20:01:18
+-- Dump completed on 2020-12-18 22:21:10
