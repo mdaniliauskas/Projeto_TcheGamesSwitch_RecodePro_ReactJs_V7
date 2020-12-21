@@ -8,7 +8,7 @@ export default function Controle(props) {
 
     // eslint-disable-next-line react-hooks/exhaustive-deps
     useEffect(async () => {
-        const resposta = await fetch("http://localhost/tchegames_React/src/php/controle.php");
+        const resposta = await fetch("http://192.168.15.17/php/controle.php");
         const dados = await resposta.json();
         setControle(dados);                                
     }, []);    

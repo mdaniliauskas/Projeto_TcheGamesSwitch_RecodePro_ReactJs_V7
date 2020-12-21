@@ -8,7 +8,7 @@ export default function Consoles() {
     const [ produtos, setProdutos ] = useState([]);
 
     useEffect(async () => {
-        const resposta = await fetch("http://localhost/tchegames_React/src/php/consoles.php");
+        const resposta = await fetch("http://192.168.15.17/php/consoles.php");
         const dados = await resposta.json();
         setProdutos(dados);  
               

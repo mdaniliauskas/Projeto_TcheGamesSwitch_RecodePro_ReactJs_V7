@@ -2,9 +2,9 @@
 
 header("Access-Control-Allow-Origin: *");
 
-$servername = "localhost";
-$username = "root";
-$password = "";
+$servername = "192.168.15.17";
+$username = "marcelod";
+$password = "lero";
 $database = "tchegames";
 
 $conn = mysqli_connect($servername, $username, $password, $database);
